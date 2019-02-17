@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{page.title}}</title>
+    <meta name="description" content="{{page.description}}">
+    <meta name="keywords" content="{{page.keywords}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="/static/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Babubaba" />
+
+    <!-- Bootstrap CSS CDN -->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/material-icons.css">
+    {{#block "header"}}
+
+    {{/block}}
+</head>
+
+<body>
+
+
+<div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Wate管理后台</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p></p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">实验管理<i class="material-icons">arrow_drop_down</i></a>
+                <ul class="collapse list-unstyled submenu" id="homeSubmenu">
+                    <li><a href="/babu/blog/list">实验列表</a></li>
+                    <li><a href="/babu/blog/add">实验申请</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">用户群管理<i class="material-icons">arrow_drop_down</i></a>
+                <ul class="collapse list-unstyled submenu" id="pageSubmenu">
+                    <li><a href="#">用户群列表</a></li>
+                    <li><a href="#">用户群申请</a></li>
+                    <li><a href="#">用户群标签</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">打点采集</a>
+            </li>
+            <li>
+                <a href="#">统计平台</a>
+            </li>
+            <li>
+                <a href="#">关于我们</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li><a href="./" class="article">Github</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                        <i class="material-icons">menu</i>
+                        <span>导航</span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Page</a></li>
+                        <li><a href="#">Page</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="wrapper-content">
+            {{#block "main"}}
+
+            {{/block}}
+            {{#if (content "right")}}
+                <div class="grid-col grid-col_1of3">
+                    {{{block "right"}}}
+                </div>
+            {{/if}}
+        </div>
+        <footer>
+            <div id="foot">
+                <span>版权所有@ http://www.babubaba.com/</span>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+    });
+</script>
+{{#block "footer"}}
+
+{{/block}}
+</body>
+
+</html>

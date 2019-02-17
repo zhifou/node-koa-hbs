@@ -1,0 +1,38 @@
+{{!-- index.html --}}
+{{#extend "layout"}}
+    {{#content "header"}}
+        <script src="11111"></script>
+    {{/content}}
+    {{#content "main" mode="append"}}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>444444</h5>
+                </div>
+                <div class="ibox-content">
+                    {{title}}
+                </div>
+                <form action="/fe/post" method="post" name="submit">
+                    <input type="text"/>
+                    <input type="submit" value="提交测试" />
+                </form>
+            </div>
+        </div>
+    </div>
+    {{/content}}
+    {{#content "right"}}
+        <p>this is right</p>
+    {{/content}}
+    {{#content "footer" mode="prepend"}}
+        <script src="/static/js/simditor/module.js"></script>
+        <!--<script src="/static/js/simditor/uploader.js"></script>-->
+        <!--<script src="/static/js/simditor/hotkeys.js"></script>-->
+        <!--<script src="/static/js/simditor/simditor.js"></script>-->
+        <!--<script src="/static/js/babuboard.js"></script>-->
+        <script>
+
+
+        </script>
+    {{/content}}
+{{/extend}}
