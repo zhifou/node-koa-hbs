@@ -1,0 +1,12 @@
+{{!-- index.html --}}
+{{#extend "layout-md"}}
+    {{#content "header"}}
+        <script></script>
+    {{/content}}
+    {{#content "main" mode="append"}}
+        {{{container}}}
+    {{/content}}
+    {{#content "footer" mode="prepend"}}
+        <script></script>
+    {{/content}}
+{{/extend}}

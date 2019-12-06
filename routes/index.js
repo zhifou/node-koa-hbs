@@ -4,8 +4,11 @@ const koaCompose = require('koa-compose');
 const hello = require('../controller/hello');
 const upload = require('../controller/upload');
 const wate = require('../controller/wate');
+const md = require('../controller/md');
 
 module.exports = () => {
+    router.get('/', hello.fe);
+    router.get('/md', md.index);
     router.get('/fe', hello.fe);
     router.post('/fe/post', hello.post);
     router.get('/fe/list', hello.list);
