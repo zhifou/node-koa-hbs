@@ -9,20 +9,13 @@
         url('../fonts/Oswald-Regular.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: 'NotoSansSC Regular';
-    src: local('NotoSansSC Regular'),
-    local('NotoSansSC'),
-    url('../fonts/NotoSansSC-Regular.otf') format('truetype');
-}
-
 body {
-    font-family: 'Oswald Regular', 'NotoSansSC Regular', sans-serif;
+    font-family: 'Oswald Regular', sans-serif;
     background: #fafafa;
 }
 
 p {
-    font-family: 'Oswald Regular', 'NotoSansSC Regular', sans-serif;
+    font-family: 'Oswald Regular', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;

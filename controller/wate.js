@@ -7,13 +7,12 @@ let MD5 = new Hashes.MD5;
 module.exports = {
 
     async wate(ctx) {
-        let obj = xlsx.parse('./config/duid.xls');
-        // let obj2 = xlsx.parse('./config/cuid2.xls');
-        console.log(JSON.stringify(obj[0]));
+        // let obj = xlsx.parse('./config/duid.xls');
+        // console.log(JSON.stringify(obj[0]));
         let arr = [];
-        obj[0].data.forEach(o => {
-            arr.push(Hashes.CRC32(o[0]));
-        });
+        // obj[0].data.forEach(o => {
+        //     arr.push(Hashes.CRC32(o[0]));
+        // });
         // obj2[0].data.forEach(o => {
         //     arr.push(Hashes.CRC32(o[0]));
         // });
@@ -41,7 +40,6 @@ module.exports = {
             aY.push(count.length);
         });
         console.log(fmap);
-
 
         await ctx.render('wate', {
             title: 'dddddddd',

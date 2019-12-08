@@ -16,7 +16,7 @@ const readFilePromise = filename => {
             resolve(data);
         })
     })
-}
+};
 
 module.exports = {
     async index(ctx) {
