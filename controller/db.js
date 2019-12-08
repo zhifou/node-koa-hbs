@@ -1,5 +1,6 @@
 
 let { query } = require('../dao/mysql');
+let redis = require('../dao/redis');
 
 module.exports = {
     async index(ctx) {

@@ -17,5 +17,6 @@ module.exports = () => {
     router.get('/backend', hello.backend);
     router.get('/wate', wate.wate);
     router.get('/upload', upload.fileUpload);
+    router.get('/getData.jsonp', hello.getJSON);
     return koaCompose([router.routes(), router.allowedMethods()]);
 };
