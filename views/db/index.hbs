@@ -1,0 +1,24 @@
+{{!-- index.html --}}
+{{#extend "layout"}}
+    {{#content "header"}}
+        <script></script>
+    {{/content}}
+    {{#content "main" mode="append"}}
+        <div class="row" style="padding-left: 20px;">
+            {{title}}
+            {{#each data}}
+                <div class="col-lg-12">
+                <span>{{this.id}}</span>
+                <span>{{this.name}}</span>
+                </div>
+            {{/each}}
+        </div>
+    {{/content}}
+    {{#content "right"}}
+        <p>this is right</p>
+    {{/content}}
+    {{#content "footer" mode="prepend"}}
+        <script>
+        </script>
+    {{/content}}
+{{/extend}}

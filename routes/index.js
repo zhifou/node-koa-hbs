@@ -5,9 +5,11 @@ const hello = require('../controller/hello');
 const upload = require('../controller/upload');
 const wate = require('../controller/wate');
 const md = require('../controller/md');
+const db = require('../controller/db');
 
 module.exports = () => {
     router.get('/', hello.fe);
+    router.get('/db', db.index);
     router.get('/md', md.index);
     router.get('/fe', hello.fe);
     router.post('/fe/post', hello.post);
