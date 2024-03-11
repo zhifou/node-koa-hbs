@@ -46,8 +46,6 @@ module.exports = {
             //   "x:size": "21944",
             // }
         });
-
-
     },
     list(ctx) {
         let accessKey =  QINIU.accessKey;
