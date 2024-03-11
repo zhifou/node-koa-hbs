@@ -6,6 +6,8 @@ const upload = require('../controller/upload');
 const wate = require('../controller/wate');
 const md = require('../controller/md');
 const db = require('../controller/db');
+const snatch = require('../controller/snatch');
+
 
 module.exports = () => {
     router.get('/', hello.fe);
@@ -18,5 +20,6 @@ module.exports = () => {
     router.get('/wate', wate.wate);
     router.get('/upload', upload.fileUpload);
     router.get('/getData.jsonp', hello.getJSON);
+    router.get('/snatch', snatch.index);
     return koaCompose([router.routes(), router.allowedMethods()]);
 };
