@@ -1,8 +1,10 @@
 {
   "name": "node-koa-hbs",
   "version": "0.0.1",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "start": "PORT=7001  node ./bin/www"
+    "start": "nodemon ./index.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -11,6 +13,7 @@
     "handlebars": "^4.7.8",
     "handlebars-layouts": "^3.1.4",
     "jshashes": "1.0.7",
+    "jsonwebtoken": "^9.0.2",
     "koa": "^2.15.0",
     "koa-bodyparser": "^4.4.1",
     "koa-compose": "^4.1.0",
@@ -23,5 +26,8 @@
     "node-xlsx": "^0.12.2",
     "qn": "^1.3.0",
     "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
